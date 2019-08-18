@@ -1,0 +1,58 @@
+{
+  "eventKey": "repo:refs_changed",
+  "date": "2019-08-18T15:58:54+0000",
+  "actor": {
+    "name": "tomasbjerre",
+    "emailAddress": "tomas.bjerre85@gmail.com",
+    "id": 1,
+    "displayName": "Tomas Bjerre",
+    "active": true,
+    "slug": "tomasbjerre",
+    "type": "NORMAL",
+    "links": { "self": [{ "href": "http://localhost:7990/users/tomasbjerre" }] }
+  },
+  "repository": {
+    "slug": "sandbox-repo",
+    "id": 1,
+    "name": "sandbox-repo",
+    "scmId": "git",
+    "state": "AVAILABLE",
+    "statusMessage": "Available",
+    "forkable": true,
+    "project": {
+      "key": "MIX",
+      "id": 1,
+      "name": "Mixed",
+      "public": false,
+      "type": "NORMAL",
+      "links": { "self": [{ "href": "http://localhost:7990/projects/MIX" }] }
+    },
+    "public": false,
+    "links": {
+      "clone": [
+        {
+          "href": "http://localhost:7990/scm/mix/sandbox-repo.git",
+          "name": "http"
+        },
+        {
+          "href": "ssh://git@localhost:7999/mix/sandbox-repo.git",
+          "name": "ssh"
+        }
+      ],
+      "self": [
+        {
+          "href": "http://localhost:7990/projects/MIX/repos/sandbox-repo/browse"
+        }
+      ]
+    }
+  },
+  "changes": [
+    {
+      "ref": { "id": "refs/tags/1.2", "displayId": "1.2", "type": "TAG" },
+      "refId": "refs/tags/1.2",
+      "fromHash": "0000000000000000000000000000000000000000",
+      "toHash": "187ccb978925d6ccdf948a58bccaf878cce046b9",
+      "type": "ADD"
+    }
+  ]
+}

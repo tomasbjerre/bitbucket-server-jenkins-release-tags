@@ -1,0 +1,75 @@
+Tomas Bjerre pushed tag 1.15 to http://bitbucket:7990/scm/mix/sandbox-repo.git referencing 187ccb978925d6ccdf948a58bccaf878cce046b9
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/release-job
+[Pipeline] {
+GenericWebhookEnvironmentContributor
+ Received:
+
+{"eventKey":"repo:refs_changed","date":"2019-08-18T16:52:09+0000","actor":{"name":"tomasbjerre","emailAddress":"tomas.bjerre85@gmail.com","id":1,"displayName":"Tomas Bjerre","active":true,"slug":"tomasbjerre","type":"NORMAL","links":{"self":[{"href":"http://bitbucket:7990/users/tomasbjerre"}]}},"repository":{"slug":"sandbox-repo","id":1,"name":"sandbox-repo","scmId":"git","state":"AVAILABLE","statusMessage":"Available","forkable":true,"project":{"key":"MIX","id":1,"name":"Mixed","public":false,"type":"NORMAL","links":{"self":[{"href":"http://bitbucket:7990/projects/MIX"}]}},"public":true,"links":{"clone":[{"href":"http://bitbucket:7990/scm/mix/sandbox-repo.git","name":"http"},{"href":"ssh://git@bitbucket:7999/mix/sandbox-repo.git","name":"ssh"}],"self":[{"href":"http://bitbucket:7990/projects/MIX/repos/sandbox-repo/browse"}]}},"changes":[{"ref":{"id":"refs/tags/1.15","displayId":"1.15","type":"TAG"},"refId":"refs/tags/1.15","fromHash":"0000000000000000000000000000000000000000","toHash":"187ccb978925d6ccdf948a58bccaf878cce046b9","type":"ADD"}]}
+
+
+Contributing variables:
+
+    clone_url = http://bitbucket:7990/scm/mix/sandbox-repo.git
+    commit = 187ccb978925d6ccdf948a58bccaf878cce046b9
+    committer_email = tomas.bjerre85@gmail.com
+    committer_name = Tomas Bjerre
+    project_key = 
+    ref = refs/tags/1.15
+    repo_slug = sandbox-repo
+    tag = 1.15
+
+
+[Pipeline] properties
+[Pipeline] stage
+[Pipeline] { (Prepare)
+[Pipeline] deleteDir
+[Pipeline] sh
++ echo git clone http://bitbucket:7990/scm/mix/sandbox-repo.git
+git clone http://bitbucket:7990/scm/mix/sandbox-repo.git
++ echo git checkout 1.15
+git checkout 1.15
++ sleep 1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ echo Validate that artifact version is 1.15
+Validate that artifact version is 1.15
++ echo Or, set artifact version to 1.15, without committing it or pushing!
+Or, set artifact version to 1.15, without committing it or pushing!
++ echo ./gradlew build
+./gradlew build
++ sleep 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Upload)
+[Pipeline] sh
++ echo Uploading...
+Uploading...
++ sleep 1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Email)
+[Pipeline] echo
+Sending email with subject 'Released 1.15 in sandbox-repo' and content:
+
+    Hi there!!
+    
+    You pushed 1.15 in http://bitbucket:7990/scm/mix/sandbox-repo.git and it is now released.
+    
+    See job here: http://localhost:8080/job/release-job/19/
+
+    See log here: http://localhost:8080/job/release-job/19//consoleText
+    
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
