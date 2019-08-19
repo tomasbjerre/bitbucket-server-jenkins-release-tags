@@ -9,7 +9,7 @@ node {
      [ key: 'tag', value: '$.changes[0].refId', regexpFilter: 'refs/tags/'],
      [ key: 'commit', value: '$.changes[0].toHash' ],
      [ key: 'repo_slug', value: '$.repository.slug' ],
-     [ key: 'project_key', value: '$.repository.project.slug' ],
+     [ key: 'project_key', value: '$.repository.project.key' ],
      [ key: 'clone_url', value: '$.repository.links.clone[0].href' ]
     ],
      

@@ -16,7 +16,7 @@ Contributing variables:
     commit = 187ccb978925d6ccdf948a58bccaf878cce046b9
     committer_email = tomas.bjerre85@gmail.com
     committer_name = Tomas Bjerre
-    project_key = 
+    project_key = MIX
     ref = refs/tags/1.15
     repo_slug = sandbox-repo
     tag = 1.15
